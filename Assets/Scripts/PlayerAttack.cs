@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    InputSystem controls;
     public Animator Animator;
     [SerializeField] private AudioSource AttackSound;
     public Transform attackpoint;
     public float attackrange = 0.5f;
     public LayerMask enemylayers;
     public int damage = 40;
-
+    void Awake()
+    {
+        controls = new InputSystem();
+        controls.Enable();
+        controls.Player.SwordAttack.performed += ctx => Attack();
+    }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        
         {
-            Attack();
+           // Attack();
         }
     }
     void Attack()
@@ -33,6 +39,14 @@ public class PlayerAttack : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(attackpoint.position, attackrange);
+    }
+    private void OnEnable()
+    {
+        controls.Enable();
+    }
+    private void OnDisable()
+    {
+        controls.Disable();
     }
 
 }

@@ -2,43 +2,72 @@
     "name": "InputSystem",
     "maps": [
         {
-            "name": "Input",
-            "id": "e4edc3a3-b193-4a8d-a6e7-66268916d6ce",
+            "name": "Player",
+            "id": "05337d1f-5507-43be-9963-c1dc5a9b83a1",
             "actions": [
                 {
-                    "name": "Movement",
-                    "type": "Value",
-                    "id": "04dbf6e0-fecd-430a-9dbc-73c456508247",
-                    "expectedControlType": "",
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "b3f43afa-88f0-478b-8ee8-edb9631a4708",
+                    "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
+                    "interactions": "Press(pressPoint=1.401298E-45)",
+                    "initialStateCheck": false
                 },
                 {
-                    "name": "Jump",
-                    "type": "Value",
-                    "id": "6b21005e-1f54-41e6-969a-6590449c7fd9",
-                    "expectedControlType": "",
+                    "name": "Movement",
+                    "type": "Button",
+                    "id": "e161e6d7-fe99-45f0-87b9-647c19a3c233",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwordAttack",
+                    "type": "Button",
+                    "id": "3f3c4809-9f53-4a9f-a9f2-1c499f73f3e4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Star Throw",
+                    "type": "Button",
+                    "id": "37d5b359-b973-40fb-8557-0f906110a99c",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "43f7635b-39a2-46e5-9010-82443e2af9f2",
-                    "path": "",
+                    "id": "ba73b8e6-ef18-42d9-83a7-d77902cc5c9f",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6a8a6b77-dcc4-412e-b3f0-d8eaea840978",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "Arrow Keys",
-                    "id": "aea6bae5-a893-4603-8a8d-b9cb9bc1bff9",
+                    "id": "922cba22-dd72-4b58-9216-af573abf5779",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
@@ -49,7 +78,7 @@
                 },
                 {
                     "name": "negative",
-                    "id": "10d53c8e-8ca6-4bd2-982e-a621f0033ef6",
+                    "id": "c6e20e93-f8d2-4331-bc84-f39839da1afc",
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
@@ -60,7 +89,7 @@
                 },
                 {
                     "name": "positive",
-                    "id": "9158cb17-7192-47a1-864e-836b397506c5",
+                    "id": "a323fa3e-1f3c-4178-bab9-fa3d0c62ff67",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
@@ -70,8 +99,8 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "WASD",
-                    "id": "d1869c21-e78d-48c3-82b6-a55ea9d023ca",
+                    "name": "AS Keys",
+                    "id": "4abbf221-2443-4ad5-b218-ababd5668fa0",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
@@ -82,7 +111,7 @@
                 },
                 {
                     "name": "negative",
-                    "id": "9dd4d700-4a7e-4bb7-8f7e-3815eea5293d",
+                    "id": "b9e069c9-8f45-4cc5-aec7-e5149a49a9fe",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -93,7 +122,7 @@
                 },
                 {
                     "name": "positive",
-                    "id": "fb43457f-3c45-4e8e-82c4-97dcdbb29be3",
+                    "id": "29f07da4-46aa-4091-8017-d0a41f0a693e",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
@@ -104,12 +133,23 @@
                 },
                 {
                     "name": "",
-                    "id": "96f72636-bcdb-436c-ac5d-515a832b5043",
-                    "path": "<Keyboard>/space",
+                    "id": "ab001a35-11b6-4802-a854-8316a6d84019",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "SwordAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8b51253b-4e86-4bcc-950f-47a2e07d437e",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Star Throw",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
