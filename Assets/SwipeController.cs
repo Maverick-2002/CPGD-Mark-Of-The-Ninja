@@ -1,13 +1,15 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class LevelSelector : MonoBehaviour
+
+public class SwipeController : MonoBehaviour
 {
     [SerializeField] GameObject MainUI, LevelUI, NextButton, PrevButton;
     [SerializeField] RectTransform page1, page2;
-    private Vector2 shiftvector = new Vector2(1, 0);
+    private Vector2 shiftvector = new Vector2(0.66f, 0);
     // Start is called before the first frame update
     void Start()
     {
