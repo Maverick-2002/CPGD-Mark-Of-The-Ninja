@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerAttack : MonoBehaviour
     public int damage = 40;
     void Awake()
     {
+        Debug.Log("AttackStart");
         controls = new InputSystem();
         controls.Enable();
         controls.Player.SwordAttack.performed += ctx => Attack();
@@ -22,11 +24,13 @@ public class PlayerAttack : MonoBehaviour
     {
         
         {
+            
            // Attack();
         }
     }
     void Attack()
     {
+        Debug.Log("Attack");
         AttackSound.Play();
         Animator.SetTrigger("Attack");
         Collider2D[] hitenemy = Physics2D.OverlapCircleAll(attackpoint.position,attackrange, enemylayers);

@@ -46,7 +46,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Sword Attack"",
+                    ""name"": ""SwordAttack"",
                     ""type"": ""Button"",
                     ""id"": ""3f3c4809-9f53-4a9f-a9f2-1c499f73f3e4"",
                     ""expectedControlType"": ""Button"",
@@ -55,12 +55,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Star Throw"",
+                    ""name"": ""StarThrow"",
                     ""type"": ""Button"",
                     ""id"": ""37d5b359-b973-40fb-8557-0f906110a99c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""initialStateCheck"": false
                 }
             ],
@@ -160,7 +160,18 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Sword Attack"",
+                    ""action"": ""SwordAttack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3758b89a-dc50-456e-af80-ab9f4c454757"",
+                    ""path"": ""<Keyboard>/numpad5"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwordAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -171,7 +182,18 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Star Throw"",
+                    ""action"": ""StarThrow"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9cbd291a-f44e-415c-8b16-316287692b9e"",
+                    ""path"": ""<Keyboard>/numpad6"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StarThrow"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -184,8 +206,8 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
-        m_Player_SwordAttack = m_Player.FindAction("Sword Attack", throwIfNotFound: true);
-        m_Player_StarThrow = m_Player.FindAction("Star Throw", throwIfNotFound: true);
+        m_Player_SwordAttack = m_Player.FindAction("SwordAttack", throwIfNotFound: true);
+        m_Player_StarThrow = m_Player.FindAction("StarThrow", throwIfNotFound: true);
     }
 
     public void Dispose()

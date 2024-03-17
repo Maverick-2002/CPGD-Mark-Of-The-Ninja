@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class CollectablesControl : MonoBehaviour
 {
-    
+    InputSystem controls;
     public int ninjastar=5;
     private int coins;
     [SerializeField] private Text ninjastarText;
@@ -19,6 +20,13 @@ public class CollectablesControl : MonoBehaviour
     public Transform Throwpoint;
     public GameObject ThrowpointPrefab;
     [SerializeField] private AudioSource StarSound;
+
+    void Awake()
+    {
+        controls = new InputSystem();
+        controls.Enable();
+        controls.Player.StarThrow.performed += ctx => NinjaStar();
+    }
     public void Start()
     {
         PlayerHealth = GetComponent<Health>();
@@ -53,20 +61,30 @@ public class CollectablesControl : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1) && ninjastar > 0)
-        {
 
+    }
+    public void NinjaStar()
+    { 
+        if (ninjastar > 0)
+        {
             Animator.SetTrigger("NinjaStar");
             StarSound.Play();
             Shoot();
             ninjastar--;
             ninjastarText.text = "Ninjastar:" + ninjastar;
-
         }
     }
     void Shoot()
     {
         Instantiate(ThrowpointPrefab, Throwpoint.position, Throwpoint.rotation);
+    }
+    private void OnEnable()
+    {
+        controls.Enable();
+    }
+    private void OnDisable()
+    {
+        controls.Disable();
     }
 
 }

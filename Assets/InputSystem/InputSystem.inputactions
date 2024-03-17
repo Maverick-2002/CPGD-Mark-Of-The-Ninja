@@ -33,12 +33,12 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Star Throw",
+                    "name": "StarThrow",
                     "type": "Button",
                     "id": "37d5b359-b973-40fb-8557-0f906110a99c",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],
@@ -144,12 +144,34 @@
                 },
                 {
                     "name": "",
+                    "id": "3758b89a-dc50-456e-af80-ab9f4c454757",
+                    "path": "<Keyboard>/numpad5",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwordAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "8b51253b-4e86-4bcc-950f-47a2e07d437e",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Star Throw",
+                    "action": "StarThrow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9cbd291a-f44e-415c-8b16-316287692b9e",
+                    "path": "<Keyboard>/numpad6",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StarThrow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
