@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    InputSystem controls;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
     private Animator anim;
@@ -21,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioSource PowerResetSound;
     private Vector3 respawnpoint;
 
-
+    
     // Start is called before the first frame update
     private void Start()
     {
