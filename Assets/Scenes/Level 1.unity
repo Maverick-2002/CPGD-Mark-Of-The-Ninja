@@ -2938,6 +2938,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 612090183484030071, guid: e5b9a51d68d9f154ca78c997a5de8841, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2104850480}
+    - target: {fileID: 612090183484030071, guid: e5b9a51d68d9f154ca78c997a5de8841, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Home
+      objectReference: {fileID: 0}
+    - target: {fileID: 612090183484030071, guid: e5b9a51d68d9f154ca78c997a5de8841, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TriggerDeath, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2267465792900774155, guid: e5b9a51d68d9f154ca78c997a5de8841, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 400
@@ -3069,6 +3081,22 @@ PrefabInstance:
     - target: {fileID: 4033990697034793862, guid: e5b9a51d68d9f154ca78c997a5de8841, type: 3}
       propertyPath: m_Name
       value: 'Canvas '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762248685465716774, guid: e5b9a51d68d9f154ca78c997a5de8841, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608284728328404784, guid: e5b9a51d68d9f154ca78c997a5de8841, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2104850480}
+    - target: {fileID: 5608284728328404784, guid: e5b9a51d68d9f154ca78c997a5de8841, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608284728328404784, guid: e5b9a51d68d9f154ca78c997a5de8841, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TriggerDeath, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -79481,6 +79509,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8751314997595374419, guid: 10c948cef5a51ee4881457786ad9b7ff, type: 3}
   m_PrefabInstance: {fileID: 1912420006}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1917538104 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4762248685465716774, guid: e5b9a51d68d9f154ca78c997a5de8841, type: 3}
+  m_PrefabInstance: {fileID: 906233477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1919551837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86578,6 +86611,17 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &2104850480 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 733660138781936728, guid: cdeac507c1e42b8498c288799e578136, type: 3}
+  m_PrefabInstance: {fileID: 6880739697532181036}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461b5fa0d6e0e264991d13bbf992b3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2118517502
 GameObject:
   m_ObjectHideFlags: 0
@@ -86795,6 +86839,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 733660138781936728, guid: cdeac507c1e42b8498c288799e578136, type: 3}
+      propertyPath: DiedMenu
+      value: 
+      objectReference: {fileID: 1917538104}
     - target: {fileID: 2928771549691081965, guid: cdeac507c1e42b8498c288799e578136, type: 3}
       propertyPath: coinsText
       value: 

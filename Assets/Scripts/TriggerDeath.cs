@@ -15,6 +15,7 @@ public class TriggerDeath : MonoBehaviour
     private Health PlayerHealth;
     private int LifeCount = 3;
     [SerializeField] private AudioSource DeathSound;
+    [SerializeField] GameObject DiedMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,11 +47,18 @@ public class TriggerDeath : MonoBehaviour
         DeathSound.Play();
         Debug.Log("Die Die Die");
         rb.bodyType = RigidbodyType2D.Static;
+        DiedMenu.SetActive(true);
     }
 
-   private void RestartLevel()
+   public void RestartLevel()
     {
+        DiedMenu.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Home()
+    {
+        SceneManager.LoadScene("StartScene");
     }
 
     
