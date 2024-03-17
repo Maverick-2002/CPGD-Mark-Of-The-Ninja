@@ -42,12 +42,14 @@ public class SwipeController : MonoBehaviour
     {
         NextButton.gameObject.SetActive(false);
         PrevButton.gameObject.SetActive(true);
+    
     }
 
     public void PreviousComp()
     {
         NextButton.gameObject.SetActive(true);
         PrevButton.gameObject.SetActive(false);
+        
     }
 
     public void Exit()
