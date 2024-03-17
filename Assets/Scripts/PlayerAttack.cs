@@ -14,7 +14,6 @@ public class PlayerAttack : MonoBehaviour
     public int damage = 40;
     void Awake()
     {
-        Debug.Log("AttackStart");
         controls = new InputSystem();
         controls.Enable();
         controls.Player.SwordAttack.performed += ctx => Attack();
