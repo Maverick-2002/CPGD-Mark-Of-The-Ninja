@@ -25,4 +25,9 @@ public class StartMenu : MonoBehaviour
         MainUI.gameObject.SetActive(false);
         PlayerUI.gameObject.SetActive(true);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
