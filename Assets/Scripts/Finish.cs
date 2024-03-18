@@ -16,6 +16,12 @@ public class Finish : MonoBehaviour
             LevelComplete = true;
             Invoke("CompleteLevel", 0.5f);
         }
+        if (collision.gameObject.name == "Ronin" && !LevelComplete)
+        {
+            FinishSound.Play();
+            LevelComplete = true;
+            Invoke("CompleteLevel", 0.5f);
+        }
     }
     private void CompleteLevel()
     {
