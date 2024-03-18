@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private Transform Camplayer;
+    [SerializeField] private Transform Ninplayer;
+    [SerializeField] private Transform RoninTarget;
+    public GameObject CameraTargetPrefab;
     private void Update()
-    {
-        transform.position = new Vector3(Camplayer.position.x,transform.position.y, transform.position.z);
+    { if (CameraTargetPrefab.activeInHierarchy)
+        {
+            transform.position = new Vector3(Ninplayer.position.x,transform.position.y, transform.position.z);
+        }
+    else
+        {
+            transform.position = new Vector3(RoninTarget.position.x, transform.position.y, transform.position.z);
+        }
+        
 
     }
 }
